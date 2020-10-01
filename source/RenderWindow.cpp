@@ -28,10 +28,6 @@ RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h) :window(NULL),
         printf("SDL_CreateRenderer\n");
     }
 
-    SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN_DESKTOP);
-
-
-
 }
 
 
@@ -62,28 +58,6 @@ void RenderWindow::clear(){
 //  RENDER TEXTURES AND SHIZ
 void RenderWindow::render(Entity &p_entity) {
 
-	// // CREATE A BASIC FONT OBJECT
-    // TTF_Font *font = TTF_OpenFont("romfs:/res/fonts/small_font.ttf", 24);
-	// SDL_Color color = {255,255,255};
-    
-    // if(!font) {
-    //     printf("TTF_Font *font failed. TTF_Error: %s\n", TTF_GetError());
-    // } else {
-    //     printf("TTF_OpenFont\n");
-    // }
-
-
-    // SDL_Surface *txt_surface = TTF_RenderText_Solid(font, "Hello, world!", color);
-	// SDL_Texture* txt_texture = SDL_CreateTextureFromSurface(renderer, txt_surface);
-	// SDL_Rect txt_rect;
-	// txt_rect.x = 10; 
-	// txt_rect.y = 10;
-	// txt_rect.w = txt_surface->w;
-	// txt_rect.h = txt_surface->h;
-
-    // SDL_RenderCopy(renderer, txt_texture, NULL, &txt_rect);
-
-
     SDL_Rect src;
     src.x = p_entity.getCurrentFrame().x;
     src.y = p_entity.getCurrentFrame().y;
@@ -91,10 +65,10 @@ void RenderWindow::render(Entity &p_entity) {
     src.h = p_entity.getCurrentFrame().h;
 
     SDL_Rect dest;
-    dest.x = p_entity.getPos().x * 4;
-    dest.y = p_entity.getPos().y * 4;
-    dest.w = p_entity.getCurrentFrame().w * 4;
-    dest.h = p_entity.getCurrentFrame().h * 4;
+    dest.x = p_entity.getPos().x * 2;
+    dest.y = p_entity.getPos().y * 2;
+    dest.w = p_entity.getCurrentFrame().w * 2;
+    dest.h = p_entity.getCurrentFrame().h * 2;
 
     SDL_RenderCopy(renderer, p_entity.getTex(), &src, &dest);
 }

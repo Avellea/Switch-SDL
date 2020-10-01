@@ -7,7 +7,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/rundebug.bin"
+            "program": "${workspaceFolder}/bin/debug/main.exe"
         }
     ]
   }

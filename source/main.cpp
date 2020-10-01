@@ -2,7 +2,7 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 
-#include <switch.h>
+//#include <switch.h>
 
 #include <iostream>
 #include <vector>
@@ -13,10 +13,7 @@
 #include "Entity.h"
 
 
-
 int main(int argc, char* args []) {
-
-	Main::switch_init();
 
     //  INITIALIZE SDL
 	if(SDL_Init(SDL_INIT_VIDEO) > 0) {
@@ -34,19 +31,19 @@ int main(int argc, char* args []) {
 	}
 
     //  CREATE WINDOW FROM RenderWindow.h/cpp
-	RenderWindow window("Game v1.0", 1920, 1080);
+	RenderWindow window("Game v1.0", 1280, 720);
 
 
-	SDL_Texture* grassTexture = window.loadTexture("res/gfx/ground_grass_1.png");
+	SDL_Texture* grassTexture = window.loadTexture("res\\gfx\\ground_grass_1.png");
 
 
 
 	std::vector<Entity> entities = {	Entity(Vector2f(0, 0), grassTexture), 
 										Entity(Vector2f(30, 0), grassTexture), 
 										Entity(Vector2f(30, 30), grassTexture), 
-										Entity(Vector2f(30, 60), grassTexture)};
+										Entity(Vector2f(30, 60), grassTexture)
+	};
 
-	
 	{
 		Entity wilson(Vector2f(100, 50), grassTexture);
 

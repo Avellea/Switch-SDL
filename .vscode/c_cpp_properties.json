@@ -5,18 +5,18 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/**",
-                "/opt/devkitpro/libnx/include/**",
-                "/usr/include/**",
-                "/usr/include/SDL2",
-                "/opt/devkitpro/devkitA64/aarch64-none-elf/include/**",
-                "/opt/devkitpro/devkitA64/lib/gcc/aarch64-none-elf/10.2.0/include/**"
+                "D:\\Libraries\\devkitPro\\libnx\\include\\**",
+                "D:\\Libraries\\mingw64\\include\\**",
+                "D:\\Libraries\\SDL2\\include\\**",
+                "D:\\Libraries\\devkitPro\\devkitA64\\aarch64-none-elf\\include\\**",
+                "D:\\Libraries\\devkitPro\\devkitA64\\lib\\gcc\\aarch64-none-elf\\10.2.0\\include\\**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "D:\\Libraries\\mingw64\\bin\\gcc.exe",
             "cStandard": "c11",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "clang-x64"
